@@ -1,0 +1,66 @@
+.selector {
+  background-color: #f6f6f6;
+  border: 1px solid #e7e7e7;
+  border-radius: 4px;
+  box-shadow: 0px 0px 0px rgba(0,0,0,0);
+  cursor: pointer;
+  min-width: 180px;
+  padding: 8px 16px;
+  overflow: hidden;
+  user-select: none;
+
+  transition: box-shadow 500ms ease;
+}
+
+.selector.open {
+  box-shadow: 2px 4px 4px rgba(0,0,0,0.15);
+}
+
+.selector .target {
+  align-items: center;
+  display: flex;
+}
+
+.selector .target .selected {
+  font-size: 1.2em;
+  letter-spacing: 0.3px;
+}
+
+.selector .target .glyphicon {
+  font-size: 0.8em;
+  transition: transform 500ms ease;
+  margin-left: auto;
+}
+
+.selector.open .target .glyphicon {
+  transform: rotate(90deg);
+}
+
+.selector .drawer {
+  overflow: hidden;
+  transition: max-height 500ms ease;
+}
+
+.selector .drawer .item {
+  padding: 8px 0;
+  font-size: 1.1em;
+
+  border-bottom: 1px solid transparent;
+  border-top: 1px solid transparent;
+
+  transition: opacity 300ms ease, padding-left 300ms ease;
+}
+
+.selector .drawer .item:first-child {
+  margin-top: 8px;
+}
+
+.selector .drawer .item:hover {
+  border-bottom: 1px solid #e7e7e7;
+  border-top: 1px solid #e7e7e7;
+  padding-left: 4px;
+}
+
+.selector .drawer .item.selected {
+  font-weight: bold;
+}

@@ -1,0 +1,20 @@
+.my-progress-bar {
+  background-color: #dfdfdf;
+  height: 6px;
+  overflow: hidden;
+  position: relative;
+  width: 100%;
+}
+
+.my-progress-bar .my-progress {
+  position: absolute;
+  background-color: #fea044;
+  box-shadow: 4px 0px 8px rgba(0,0,0,0.1);
+  top: 0;
+  left: 0;
+  height: 6px;
+  width: 100%;
+  transform-origin: 0 50%;
+
+  transition: transform 500ms ease;
+}

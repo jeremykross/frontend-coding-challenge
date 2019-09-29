@@ -1,0 +1,118 @@
+@keyframes pulse {
+  from { opacity: 0.3; transform: scale(0.75, 0.75) }
+  to { opacity: 1; transform: scale(1, 1); }
+}
+
+.card {
+  border: 1px solid lightgrey;
+  border-radius: 6px;
+  box-shadow: 1px 1px 4px rgba(0,0,0,0.1);
+  overflow: hidden;
+  margin: 0 16px 16px 0;
+  max-width: 256px;
+  max-height: 296px;
+  min-height: 296px;
+  min-width: 256px;
+  position: relative;
+  transition: box-shadow 300ms ease;
+}
+
+.card:hover {
+  box-shadow: 2px 2px 4px rgba(0,0,0,0.25);
+}
+
+.card img {
+  display: block;
+  max-width: 100%;
+  min-height: 156px;
+  width: auto;
+}
+
+.card h5 {
+  font-size: 1.1em;
+  font-weight: normal;
+  min-height: 32px;
+}
+
+.card > .content {
+  padding: 8px 16px;
+}
+
+.card .plan-info {
+  display: flex;
+  color: #a0a0a0;
+  font-size: 0.95em;
+  margin-bottom: 4px;
+}
+
+.card .status {
+  margin-left: auto;
+}
+
+.card .status .indicator {
+  background-color: orange;
+  border-radius: 50%;
+  display: inline-block;
+  height: 8px;
+  margin-left: 8px;
+  width: 8px;
+}
+
+.card .status .indicator.active {
+  background-color: green;
+}
+
+.card .status .indicator.expired,
+.card .status .indicator.declined, 
+.card .status .indicator.terminated {
+  background-color: red;
+}
+
+.card .status .indicator.pending {
+  animation-direction: alternate;
+  animation-duration: 400ms;
+  animation-name: pulse;
+  animation-timing-function: linear;
+  animation-iteration-count: infinite;
+}
+
+.card > .context-menu {
+  opacity: 0;
+  pointer-events: none;
+  position: absolute;
+  right: 8px;
+  top: 16px;
+  z-index: 1;
+
+  transition: opacity 300ms ease, top 300ms ease;
+}
+
+.card:hover > .context-menu {
+  opacity: 1;
+  pointer-events: all;
+  top: 8px;
+}
+
+.card .extra-info {
+  align-items: center;
+  color: #a0a0a0;
+  display: flex;
+  font-size: 0.92em;
+  justify-content: center;
+  position: absolute;
+  background-color: #f4f4f4;
+  height: 32px;
+  padding: 0 16px;
+  border-top: 1px solid #dfdfdf;
+  bottom: 0;
+  width: 100%;
+}
+
+.card .extra-info > div {
+  flex: 1;
+  text-align: center;
+}
+
+.card .extra-info .glyphicon {
+  margin: 0 4px;
+}

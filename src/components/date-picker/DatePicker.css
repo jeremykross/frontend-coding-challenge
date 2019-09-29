@@ -1,0 +1,26 @@
+.date-picker {
+  align-items: center;
+  color: #e84c3d;
+  display: flex;
+  font-size: 1.1em;
+  height: 100%;
+  letter-spacing: 0.3px;
+}
+
+.date-picker .arrow {
+  font-weight: bold;
+  margin: 24px;
+}
+
+.date-picker .glyphicon-calendar {
+  display: inline-block;
+  margin-right: 8px;
+}
+
+.date-picker .interval {
+  background: #e84c3d;
+  border-radius: 16px;
+  color: white;
+  padding: 4px 16px;
+  font-size: 0.8em;
+}

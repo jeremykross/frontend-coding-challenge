@@ -1,0 +1,59 @@
+@keyframes enter {
+  from {opacity: 0; transform: translateY(-8px);}
+  to {opacity: 1; transform: translateY(0);}
+}
+
+.context-menu {
+  display: flex;
+  flex-direction: column;
+}
+
+.context-menu > .glyphicon {
+  background-color: #fefefe;
+  border: 1px solid #dfdfdf;
+  cursor: pointer;
+  margin-left: auto;
+  padding: 4px;
+  transition: color 200ms ease;
+}
+
+.context-menu.open > .glyphicon {
+  color: #fa7903;
+}
+
+.context-menu > .menu {
+  animation-duration: 200ms;
+  animation-name: enter;
+
+  background-color: white;
+  border: 1px solid #e4e4e4;
+  box-shadow: 2px 2px 4px rgba(0,0,0,0.25);
+
+  transform-origin: 50% 0;
+
+}
+
+.context-menu > .menu > .item {
+  cursor: pointer;
+  list-style-type: none;
+  padding: 8px 16px;
+  border-bottom: 1px solid #e4e4e4;
+  user-select: none;
+}
+
+.context-menu > .menu > .item:last-child {
+  border-bottom: none;
+}
+
+.context-menu > .menu > .item.disabled {
+  cursor: default;
+  pointer-events: none;
+  color: rgba(0,0,0, 0.3);
+}
+
+
+.context-menu > .menu > .item > .glyphicon {
+  margin-right: 8px;
+}
+
+
