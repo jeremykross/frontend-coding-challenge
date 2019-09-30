@@ -7,14 +7,13 @@
 }
 
 .my-progress-bar .my-progress {
-  position: absolute;
   background-color: #fea044;
   box-shadow: 4px 0px 8px rgba(0,0,0,0.1);
-  top: 0;
   left: 0;
+  position: absolute;
   height: 6px;
   width: 100%;
+  top: 0;
   transform-origin: 0 50%;
-
   transition: transform 500ms ease;
 }

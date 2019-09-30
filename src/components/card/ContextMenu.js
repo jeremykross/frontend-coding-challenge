@@ -13,6 +13,7 @@ const ContextMenu = ({ onClick, onItemClick, isOpen, items }) => {
         <div className="menu">
           {items.map(item => (
             <div
+              key={item.name}
               className={`item ${ item.disabled ? 'disabled' : '' }`}
               onClick={() =>
                 onItemClick && onItemClick(item)

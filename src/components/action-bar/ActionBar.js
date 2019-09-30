@@ -6,9 +6,9 @@ const ActionBar = ({
   children,
 }) => (
   <header className="action-bar">
-    <section className="content">
+    <div className="content">
       {children}
-    </section>
+    </div>
   </header>
 )
 

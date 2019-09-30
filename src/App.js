@@ -1,4 +1,5 @@
 import React, { useEffect } from 'react';
+import PropTypes from 'prop-types'
 import { connect } from 'react-redux'
 
 // components
@@ -89,6 +90,15 @@ const App = ({
       </div>
   )
 };
+
+App.propTypes = {
+  campaigns: PropTypes.array.isRequired,
+  cards: PropTypes.array.isRequired,
+  currentCampaign: PropTypes.string.isRequired,
+  setCampaignList: PropTypes.func.isRequired,
+  setCardList: PropTypes.func.isRequired,
+  setCurrentCampaign: PropTypes.func.isRequired,
+}
 
 export default connect(
   ({ campaigns, cards }) => ({
